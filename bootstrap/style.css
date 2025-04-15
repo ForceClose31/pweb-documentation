@@ -1,0 +1,76 @@
+body {
+  background: linear-gradient(to bottom right, #0f0f0f, #1a1a1a);
+  color: #ffffff;
+  scroll-behavior: smooth;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar {
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.85);
+}
+.hero {
+  height: 100vh;
+  background: radial-gradient(circle at center, #202020, #111111);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(97, 218, 251, 0.1), transparent 70%);
+  animation: rotate 30s linear infinite;
+  z-index: 0;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.hero-content {
+  z-index: 1;
+}
+.hero h1 {
+  font-size: 4rem;
+}
+.hero p {
+  font-size: 1.25rem;
+  color: #ccc;
+}
+.section {
+  padding: 5rem 0;
+  background-color: #1a1a1a;
+}
+.card:hover {
+  transform: translateY(-10px);
+  transition: 0.4s;
+}
+.icon-box {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #17c0eb;
+}
+footer {
+  background: #101010;
+  color: #aaa;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.fade-scroll {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.fade-scroll.visible {
+  opacity: 1;
+}
